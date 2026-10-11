@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+
+  <!-- SEO -->
+  <title>Galería de cortes de pelo en Madrid | Medellín Studio</title>
+
+  <meta
+    name="description"
+    content="Descubre los cortes de pelo y trabajos de Medellín Studio, barbería en Ciudad Lineal, Madrid. Inspírate con nuestros estilos y reserva tu próxima cita."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <!-- REDES SOCIALES -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Medellín Studio">
+
+  <meta
+    property="og:title"
+    content="Galería de cortes de pelo | Medellín Studio"
+  >
+
+  <meta
+    property="og:description"
+    content="Conoce nuestros trabajos y descubre el estilo de Medellín Studio, tu barbería en Madrid."
+  >
+
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+
+  <!-- SUPABASE -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"
+    defer
+  ></script>
+  <script src="js/config.js" defer></script>
+
+  <!-- FUNCIONALIDAD -->
+  <script src="js/navegacion.js" defer></script>
+  <script src="js/galeria.js" defer></script>
+</head>
+
+<body>
+
+  <!-- CABECERA -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="Medellín Studio, inicio">
+        MEDELLÍN<span>STUDIO</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">INICIO</a>
+        <a href="servicios.html">SERVICIOS</a>
+        <a href="galeria.html" class="active" aria-current="page">GALERÍA</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="reservas.html" class="nav-book">RESERVAR ↗</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="gallery-hero">
+      <div class="container">
+        <span class="gallery-eyebrow">01 / NUESTRO TRABAJO</span>
+
+        <h1>CADA CORTE.<br><span>UNA HISTORIA.</span></h1>
+
+        <p>
+          No se trata solo de cortar el pelo. Se trata de encontrar
+          un estilo que encaje contigo. Descubre algunos de nuestros trabajos.
+        </p>
+
+        <div class="gallery-hero-line"></div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery-section">
+      <div class="container">
+
+        <div class="gallery-section-top">
+          <div>
+            <span class="gallery-eyebrow">MEDELLÍN STUDIO / MADRID</span>
+            <h2>EL RESULTADO<br>HABLA POR SÍ SOLO.</h2>
+          </div>
+
+          <span class="gallery-counter">NUESTROS TRABAJOS ↘</span>
+        </div>
+        
+        <div
+        class="gallery-grid"
+        id="gallery-container"
+        aria-live="polite">
+
+        <p class="gallery-loading">
+            Cargando nuestros trabajos...
+        </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="gallery-instagram">
+      <div class="container gallery-instagram-inner">
+
+        <div>
+          <span class="gallery-eyebrow">SÍGUENOS EN INSTAGRAM</span>
+          <h2>EL ESTILO<br>NO SE DETIENE.</h2>
+          <p>
+            Más cortes, más inspiración y novedades de nuestro estudio.
+          </p>
+        </div>
+
+        <a href="https://www.instagram.com/medellin__studio/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="gallery-instagram-button">
+          VER INSTAGRAM ↗
+        </a>
+
+      </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section class="gallery-cta">
+      <div class="container gallery-cta-inner">
+        <div>
+          <span class="gallery-eyebrow">¿TE TOCA UN CAMBIO?</span>
+          <h2>EL PRÓXIMO<br>PUEDES SER TÚ.</h2>
+        </div>
+
+        <a href="reservas.html" class="gallery-cta-button">
+          RESERVAR CITA ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="brand">
+          MEDELLÍN<span>STUDIO</span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Enlaces del pie de página">
+          <a href="index.html">INICIO</a>
+          <a href="servicios.html">SERVICIOS</a>
+          <a href="galeria.html">GALERÍA</a>
+          <a href="nosotros.html">NOSOTROS</a>
+          <a href="contacto.html">CONTACTO</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="current-year">2026</span> MEDELLÍN STUDIO</span>
+        <span>CALLE EZEQUIEL SOLANA 99 · MADRID</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
