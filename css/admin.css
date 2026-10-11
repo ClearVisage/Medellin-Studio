@@ -1,0 +1,1037 @@
+
+/* =====================================
+   MEDELLÍN STUDIO — ACCESO PRIVADO
+===================================== */
+
+.login-page {
+  background: #0b0b0d;
+  color: #fff;
+}
+
+.login-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.login-card {
+  width: min(100%, 540px);
+  margin: auto;
+  padding: 60px 45px;
+}
+
+.login-back {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #a2a5ac;
+  margin-bottom: 70px;
+}
+
+.login-back:hover {
+  color: #fff;
+}
+
+.login-brand {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(36px, 4vw, 53px);
+  line-height: 1;
+}
+
+.login-brand span {
+  color: #858991;
+  margin-left: 6px;
+}
+
+.login-subtitle {
+  display: block;
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #92969f;
+}
+
+.login-divider {
+  height: 1px;
+  background: #33353b;
+  margin: 40px 0;
+}
+
+.login-card h1 {
+  font-size: clamp(45px, 5vw, 68px);
+}
+
+.login-card h1 span {
+  color: #858991;
+}
+
+.login-description {
+  color: #a5a8af;
+  font-size: 14px;
+  max-width: 350px;
+  margin: 25px 0 38px;
+}
+
+.login-field {
+  margin-bottom: 22px;
+}
+
+.login-field label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  color: #c5c7cc;
+}
+
+.login-field input {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid #44464d;
+  border-radius: 0;
+  padding: 15px 17px;
+  background: #17181c;
+  color: #fff;
+  outline: none;
+  transition: border-color .25s ease;
+}
+
+.login-field input:focus {
+  border-color: #3978da;
+}
+
+.login-field input::placeholder {
+  color: #777b84;
+}
+
+.login-submit {
+  width: 100%;
+  min-height: 55px;
+  margin-top: 12px;
+  border: none;
+  background: #fff;
+  color: #111215;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: background .25s ease;
+}
+
+.login-submit:hover {
+  background: #d4d7dd;
+}
+
+.login-submit:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+
+.login-message {
+  min-height: 20px;
+  color: #ff8c8c;
+  font-size: 12px;
+}
+
+.login-message.success {
+  color: #9ed5b3;
+}
+
+.login-footer {
+  margin-top: 45px;
+  color: #777b83;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.login-side {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+  background:
+    linear-gradient(0deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.15)),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.login-side::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: #3978da;
+}
+
+.login-side-content {
+  position: relative;
+  z-index: 1;
+}
+
+.login-side-content > span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #b4b7bf;
+  margin-bottom: 20px;
+}
+
+.login-side-content strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: clamp(45px, 6vw, 90px);
+  line-height: .95;
+}
+
+.login-side-content p {
+  color: #c1c3ca;
+}
+
+@media (max-width: 850px) {
+  .login-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .login-side {
+    display: none;
+  }
+
+  .login-card {
+    padding: 40px 25px;
+  }
+
+  .login-back {
+    margin-bottom: 55px;
+  }
+}
+
+
+/* =====================================
+   MEDELLÍN STUDIO — PANEL ADMIN
+===================================== */
+
+[hidden] {
+  display: none !important;
+}
+
+.admin-page {
+  background: #101114;
+  color: #fff;
+}
+
+.admin-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: #aeb0b8;
+  font-size: 14px;
+}
+
+.admin-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 255px minmax(0,1fr);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #0b0b0d;
+  border-right: 1px solid #303136;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-logo {
+  font-family: var(--font-title);
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 60px;
+}
+
+.admin-logo span {
+  color: #888c95;
+  margin-left: 4px;
+}
+
+.admin-logo small {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #898d95;
+}
+
+.admin-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  color: #a5a7ae;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-nav-link.active,
+.admin-nav-link:hover {
+  background: #24262c;
+  color: #fff;
+  border-left: 3px solid #3978da;
+}
+
+.admin-sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-sidebar-bottom a,
+.admin-sidebar-bottom button {
+  background: transparent;
+  border: none;
+  color: #a7aab2;
+  text-align: left;
+  font-size: 12px;
+  padding: 8px;
+}
+
+.admin-sidebar-bottom button:hover,
+.admin-sidebar-bottom a:hover {
+  color: #fff;
+}
+
+.admin-main {
+  min-width: 0;
+}
+
+.admin-topbar {
+  min-height: 85px;
+  padding: 20px 45px;
+  border-bottom: 1px solid #34363b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-topbar-label {
+  display: block;
+  color: #8e929b;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.admin-topbar strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  color: #b6b8bf;
+  overflow-wrap: anywhere;
+}
+
+.admin-avatar {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  background: #3978da;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.admin-content {
+  padding: 55px 45px;
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+.admin-eyebrow {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #9397a0;
+  margin-bottom: 16px;
+}
+
+.admin-heading h1 {
+  font-size: clamp(38px,5vw,64px);
+}
+
+.admin-heading h1 span {
+  color: #3978da;
+}
+
+.admin-heading p,
+.admin-section-heading p {
+  color: #a0a3ac;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.admin-stat {
+  padding: 28px;
+  background: #1b1c21;
+  border: 1px solid #34363d;
+}
+
+.admin-stat > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #aaaeb6;
+}
+
+.admin-stat strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 65px;
+  margin: 12px 0;
+}
+
+.admin-stat small {
+  color: #888c95;
+  font-size: 11px;
+}
+
+.admin-services-section {
+  margin-top: 80px;
+}
+
+.admin-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.admin-section-heading h2 {
+  font-size: clamp(30px,4vw,45px);
+}
+
+.admin-primary-button,
+.admin-secondary-button {
+  min-height: 46px;
+  padding: 13px 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.admin-primary-button {
+  background: #fff;
+  color: #101114;
+}
+
+.admin-primary-button:hover {
+  background: #d6d8dd;
+}
+
+.admin-secondary-button {
+  background: transparent;
+  color: #fff;
+  border-color: #555861;
+}
+
+.admin-primary-button:disabled {
+  opacity: .5;
+  cursor: wait;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #383a42;
+  background: #191a1f;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 20px;
+  color: #8e929b;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #383a42;
+}
+
+.admin-table td {
+  padding: 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #303239;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table td strong {
+  display: block;
+  font-size: 14px;
+}
+
+.admin-table td small {
+  display: block;
+  margin-top: 7px;
+  color: #8e929b;
+  line-height: 1.5;
+  max-width: 350px;
+}
+
+.admin-status {
+  display: inline-block;
+  padding: 7px 10px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.admin-status.active {
+  color: #b4e4c4;
+  background: #203b2b;
+}
+
+.admin-status.inactive {
+  color: #c4c5c9;
+  background: #35363b;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-action-button {
+  padding: 9px 11px;
+  border: 1px solid #53555d;
+  background: transparent;
+  color: #fff;
+  font-size: 11px;
+}
+
+.admin-action-button:hover {
+  background: #30323a;
+}
+
+.admin-action-button.danger {
+  color: #ff9b9b;
+}
+
+.admin-message {
+  min-height: 18px;
+  font-size: 12px;
+  color: #ff9b9b;
+  margin-top: 15px;
+}
+
+.admin-message.success {
+  color: #a7dbb9;
+}
+
+/* MODAL */
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.admin-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.82);
+}
+
+.admin-modal-dialog {
+  position: relative;
+  width: min(100%,570px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px;
+  background: #1b1c21;
+  border: 1px solid #484a52;
+}
+
+.admin-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-modal-header h2 {
+  font-size: 36px;
+}
+
+.admin-modal-header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+}
+
+.admin-field {
+  margin-bottom: 20px;
+}
+
+.admin-field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #bfc1c8;
+}
+
+.admin-field input,
+.admin-field textarea {
+  width: 100%;
+  padding: 14px;
+  background: #101114;
+  border: 1px solid #484a52;
+  color: #fff;
+  border-radius: 0;
+}
+
+.admin-field input:focus,
+.admin-field textarea:focus {
+  outline: 2px solid #3978da;
+  outline-offset: 1px;
+}
+
+.admin-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c8cbd1;
+  font-size: 13px;
+}
+
+.admin-checkbox input {
+  accent-color: #3978da;
+  width: 17px;
+  height: 17px;
+}
+
+.admin-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: static;
+    height: auto;
+    padding: 22px;
+  }
+
+  .admin-logo {
+    margin-bottom: 25px;
+  }
+
+  .admin-navigation {
+    flex-direction: row;
+  }
+
+  .admin-sidebar-bottom {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .admin-content {
+    padding: 35px 22px;
+  }
+
+  .admin-topbar {
+    padding: 20px 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-user #admin-email {
+    display: none;
+  }
+
+  .admin-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-modal-dialog {
+    padding: 22px;
+  }
+
+  .admin-modal-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* =====================================
+   MEDELLÍN STUDIO — GESTIÓN DE GALERÍA
+===================================== */
+
+.admin-gallery-section {
+  margin-top: 85px;
+  padding-top: 55px;
+  border-top: 1px solid #383a42;
+}
+
+.admin-gallery-upload {
+  padding: 28px;
+  background: #1b1c21;
+  border: 1px solid #383a42;
+  margin-bottom: 35px;
+}
+
+.admin-gallery-upload .admin-field input[type="file"] {
+  cursor: pointer;
+}
+
+.admin-gallery-upload .admin-field small {
+  display: block;
+  margin-top: 10px;
+  color: #9397a0;
+  font-size: 11px;
+}
+
+.admin-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.admin-gallery-card {
+  min-width: 0;
+  background: #1b1c21;
+  border: 1px solid #383a42;
+  overflow: hidden;
+}
+
+.admin-gallery-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.admin-gallery-card-body {
+  padding: 18px;
+}
+
+.admin-gallery-card-body strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+.admin-gallery-card-body small {
+  display: block;
+  color: #9da1aa;
+  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.admin-gallery-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 1050px) {
+  .admin-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-gallery-upload {
+    padding: 20px;
+  }
+}
+
+
+/* ==========================================
+   MEDELLÍN STUDIO — AJUSTES PANEL ADMIN
+========================================== */
+
+/* EVITAR DESBORDAMIENTOS */
+
+.admin-layout,
+.admin-main,
+.admin-content,
+.admin-services-section,
+.admin-gallery-section {
+  min-width: 0;
+}
+
+.admin-heading h1,
+.admin-section-heading h2 {
+  overflow-wrap: anywhere;
+}
+
+/* NAVEGACIÓN */
+
+.admin-navigation {
+  min-width: 0;
+}
+
+.admin-nav-link {
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease;
+}
+
+.admin-nav-link:focus-visible,
+.admin-action-button:focus-visible,
+.admin-primary-button:focus-visible,
+.admin-secondary-button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* TABLAS */
+
+.admin-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-table td {
+  vertical-align: middle;
+}
+
+.admin-actions {
+  flex-wrap: wrap;
+}
+
+.admin-action-button {
+  min-height: 38px;
+}
+
+/* FORMULARIOS */
+
+.admin-field input,
+.admin-field textarea,
+.admin-field select {
+  max-width: 100%;
+}
+
+.admin-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* MODALES */
+
+.admin-modal-dialog {
+  max-height: min(90vh, 850px);
+  max-height: min(90dvh, 850px);
+  overscroll-behavior: contain;
+}
+
+.admin-modal-header {
+  gap: 15px;
+}
+
+.admin-modal-header h2 {
+  overflow-wrap: anywhere;
+}
+
+/* GALERÍA */
+
+.admin-gallery-card img {
+  background: #25262b;
+}
+
+.admin-gallery-card-actions button {
+  min-height: 38px;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  .admin-navigation {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .admin-nav-link {
+    flex: 0 1 auto;
+  }
+
+  .admin-sidebar-bottom {
+    flex-wrap: wrap;
+  }
+
+  .admin-topbar {
+    flex-wrap: wrap;
+  }
+
+}
+
+/* MÓVILES */
+
+@media (max-width: 600px) {
+
+  .admin-content {
+    padding: 30px 18px;
+  }
+
+  .admin-topbar {
+    padding: 18px;
+  }
+
+  .admin-sidebar {
+    padding: 20px 18px;
+  }
+
+  .admin-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .admin-nav-link {
+    justify-content: center;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 12px;
+  }
+
+  .admin-stat {
+    padding: 22px;
+  }
+
+  .admin-stat strong {
+    font-size: 52px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 15px;
+  }
+
+  .admin-modal {
+    padding: 12px;
+  }
+
+  .admin-modal-dialog {
+    padding: 22px 18px;
+    max-height: calc(100dvh - 24px);
+  }
+
+  .admin-modal-actions button {
+    width: 100%;
+  }
+
+  .admin-gallery-upload {
+    padding: 18px;
+  }
+
+  .admin-gallery-card-actions {
+    gap: 10px;
+  }
+
+}
+
+/* PANTALLAS MUY ESTRECHAS */
+
+@media (max-width: 380px) {
+
+  .admin-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-logo {
+    font-size: 26px;
+  }
+
+  .admin-heading h1 {
+    font-size: 38px;
+  }
+
+}
+
+/* MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admin-nav-link,
+  .admin-primary-button,
+  .admin-secondary-button {
+    transition: none;
+  }
+
+}
