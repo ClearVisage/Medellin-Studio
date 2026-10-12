@@ -2247,3 +2247,112 @@
   }
 
 }
+
+
+/* ==========================================
+   MEDELLÍN STUDIO — MAPA BAJO DEMANDA
+========================================== */
+
+.contact-page-map {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-map-placeholder {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(57, 120, 218, 0.13),
+      transparent 65%
+    ),
+    #101114;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-map-placeholder-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-map-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #9ba0aa;
+}
+
+.contact-map-pin {
+  color: #3978da;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.contact-map-placeholder h3 {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+}
+
+.contact-map-placeholder p {
+  margin: 0;
+  color: #a9acb3;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.contact-map-load-button {
+  padding: 17px 28px;
+  background: #3978da;
+  border: 1px solid #3978da;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-map-load-button:hover {
+  background: #275cac;
+  transform: translateY(-2px);
+}
+
+.contact-map-load-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.contact-page-map iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .contact-map-placeholder {
+    min-height: 320px;
+  }
+
+  .contact-page-map iframe {
+    height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-map-load-button {
+    transition: none;
+  }
+}
