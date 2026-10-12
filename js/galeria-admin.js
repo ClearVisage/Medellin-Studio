@@ -313,10 +313,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       Eliminamos el archivo de Storage.
     */
 
-    const { error: storageError } =
-      await supabaseClient.storage
+    console.log("Ruta que intentamos eliminar:", foto.ruta_archivo);
+
+    const { data: storageData, error: storageError } =
+    await supabaseClient.storage
         .from(BUCKET)
         .remove([foto.ruta_archivo]);
+
+    console.log("Respuesta de Storage:", storageData);
+    console.log("Error de Storage:", storageError);
+
+    if (!storageError) {
+    const archivosEliminados = Array.isArray(storageData)
+        ? storageData
+        : [];
+
+    const archivoConfirmado = archivosEliminados.some(
+        archivo => archivo.name === foto.ruta_archivo
+    );
+
+    if (!archivoConfirmado) {
+        throw new Error(
+        "Storage no confirmó la eliminación del archivo solicitado."
+        );
+    }
+    }
 
     if (storageError) {
       /*
