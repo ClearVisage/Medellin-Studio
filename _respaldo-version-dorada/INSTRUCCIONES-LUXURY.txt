@@ -1,0 +1,10 @@
+REDISEÑO LUXURY (negro + dorado)
+
+- Estilos: css/global.css (paleta y tipografía), css/componentes.css (cabecera, botones, pie),
+  css/paginas.css (todas las páginas públicas), css/admin.css (login y panel).
+- css/luxury.css se eliminó: su contenido quedó integrado en los archivos anteriores.
+- Motivo visual: el "espejo de barbero" (fotos en arco con marco dorado).
+- No se tocó ningún archivo JS ni la conexión con Supabase. Los IDs y clases que usa el JS siguen igual.
+- Las fotos son de Unsplash (ilustrativas). Para usar fotos propias, cambia las URL en el HTML
+  o en css/paginas.css (busca "images.unsplash.com").
+- Abre index.html con Live Server en VS Code para ver la vista previa.

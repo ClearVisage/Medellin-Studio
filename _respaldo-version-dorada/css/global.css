@@ -1,0 +1,182 @@
+/* ==========================================
+   MEDELLÍN STUDIO — GLOBAL (LUXURY NEGRO / ORO)
+========================================== */
+
+:root {
+  /* PALETA */
+  --ink: #000000;          /* fondo principal */
+  --surface: #0c0b09;      /* superficies cálidas */
+  --surface-2: #15130f;    /* tarjetas, inputs */
+  --gold: #c8a46a;         /* detalle principal */
+  --gold-soft: #e4cb98;    /* hover / brillo */
+  --gold-deep: #8f7343;    /* sombras del oro */
+  --text: #f3eee5;
+  --muted: #a49d90;
+  --line: rgba(200, 164, 106, .22);
+  --line-strong: rgba(200, 164, 106, .5);
+
+  /* Compatibilidad con nombres anteriores */
+  --black: var(--ink);
+  --charcoal: var(--surface-2);
+  --gray: var(--muted);
+  --light: var(--text);
+  --white: var(--text);
+  --blue: var(--gold);
+  --background: var(--ink);
+  --foreground: var(--text);
+  --border: var(--line);
+
+  /* TIPOGRAFÍA */
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', Arial, sans-serif;
+
+  /* ESTRUCTURA */
+  --container: 1240px;
+  --radius: 0;
+  --arch: 999px 999px 0 0;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* TIPOGRAFÍA */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: .98;
+  letter-spacing: .01em;
+}
+
+h1 {
+  font-size: clamp(3.4rem, 8vw, 7.4rem);
+}
+
+h2 {
+  font-size: clamp(2.6rem, 5.4vw, 4.8rem);
+}
+
+/* La segunda línea de cada título: firma en cursiva dorada */
+h1 span,
+h2 span {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.75;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 1px solid var(--gold-soft);
+  outline-offset: 4px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 650px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
