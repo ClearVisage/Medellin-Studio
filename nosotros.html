@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0d">
+  <meta name="theme-color" content="#000000">
 
   <!-- SEO -->
   <title>Conoce nuestra barbería en Madrid | Medellín Studio</title>
@@ -33,15 +33,12 @@
   >
 
   <!-- FUENTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
 
   <!-- ESTILOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/paginas.css">
@@ -55,32 +52,24 @@
   <!-- CABECERA -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-
-      <a href="index.html" class="brand"
-         aria-label="Medellín Studio, inicio">
-        MEDELLÍN<span>STUDIO</span>
+      <a class="brand" href="index.html" aria-label="Medellín Studio, inicio">
+        <img src="img/logo-horizontal.png" alt="Medellín Studio" width="182" height="34">
       </a>
 
-      <button class="menu-toggle"
-              id="menu-toggle"
-              type="button"
-              aria-label="Abrir menú"
-              aria-expanded="false"
-              aria-controls="site-nav">
+      <button class="menu-toggle" id="menu-toggle" type="button"
+              aria-label="Abrir menú" aria-controls="main-nav"
+              aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="site-nav" id="site-nav"
-           aria-label="Navegación principal">
-        <a href="index.html">INICIO</a>
-        <a href="servicios.html">SERVICIOS</a>
-        <a href="galeria.html">GALERÍA</a>
-        <a href="nosotros.html" class="active"
-           aria-current="page">NOSOTROS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="reservas.html" class="nav-book">RESERVAR ↗</a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="nosotros.html" class="active" aria-current="page">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="reservas.html" class="nav-booking">Reservar cita</a>
       </nav>
-
     </div>
   </header>
 
@@ -113,11 +102,11 @@
       <div class="container about-page-story-grid">
 
         <div class="about-page-image">
-          <div class="about-page-image-placeholder">
-            <span>MEDELLÍN STUDIO</span>
-            <strong>NUESTRO ESPACIO</strong>
-            <small>FOTOGRAFÍA PRÓXIMAMENTE</small>
-          </div>
+          <img
+            src="img/barbero-david.jpg"
+            alt="David trabajando un corte en Medellín Studio"
+            loading="lazy"
+            decoding="async">
         </div>
 
         <div class="about-page-story-content">
@@ -126,7 +115,7 @@
             02 / NUESTRA IDENTIDAD
           </span>
 
-          <h2>EL ESTILO<br>EMPIEZA AQUÍ.</h2>
+          <h2>EL ESTILO<br><span>EMPIEZA AQUÍ.</span></h2>
 
           <p>
             En Medellín Studio entendemos la barbería como algo
@@ -163,7 +152,7 @@
             03 / NUESTRA FORMA DE TRABAJAR
           </span>
 
-          <h2>LOS DETALLES<br>MARCan LA DIFERENCIA.</h2>
+          <h2>LOS DETALLES<br><span>MARCAN LA DIFERENCIA.</span></h2>
         </div>
 
         <div class="about-page-values-grid">
@@ -209,18 +198,30 @@
             04 / DETRÁS DE CADA CORTE
           </span>
 
-          <h2>CONOCE<br>EL ESTUDIO.</h2>
+          <h2>CONOCE<br><span>AL EQUIPO.</span></h2>
 
           <p>
-            Próximamente podrás conocer mejor al equipo
-            y el espacio de Medellín Studio.
+            David, Esneider, Jadiel, Luis y Sebastián: un equipo
+            que escucha antes de cortar.
           </p>
         </div>
 
-        <div class="about-page-team-placeholder">
-          <span>MEDELLÍN STUDIO / EQUIPO</span>
-          <strong>ESTILO, TÉCNICA<br>Y DEDICACIÓN.</strong>
-          <small>FOTOGRAFÍA DEL EQUIPO PRÓXIMAMENTE</small>
+        <div class="team-grid">
+          <figure class="team-member">
+            <img src="img/barbero-david.jpg" alt="David, barbero de Medellín Studio"
+                 width="1101" height="1101" decoding="async">
+            <figcaption><strong>David</strong><span>Barbero</span></figcaption>
+          </figure>
+          <figure class="team-member">
+            <img src="img/barbero-esneider.jpg" alt="Esneider, barbero de Medellín Studio"
+                 width="1600" height="1600" decoding="async">
+            <figcaption><strong>Esneider</strong><span>Barbero</span></figcaption>
+          </figure>
+          <figure class="team-member">
+            <img src="img/barbero-jadiel.jpg" alt="Jadiel, barbero de Medellín Studio"
+                 width="923" height="923" decoding="async">
+            <figcaption><strong>Jadiel</strong><span>Barbero</span></figcaption>
+          </figure>
         </div>
 
       </div>
@@ -235,7 +236,7 @@
             TU PRÓXIMO CORTE TE ESPERA
           </span>
 
-          <h2>VEN A<br>CONOCERNOS.</h2>
+          <h2>VEN A<br><span>CONOCERNOS.</span></h2>
 
           <p>
             Estamos en Calle Ezequiel Solana 99, Madrid.
@@ -254,29 +255,34 @@
   <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
     <div class="container">
-
       <div class="footer-top">
+        <div>
+          <div class="footer-brand"><img src="img/logo.png" alt="Medellín Studio" width="380" height="111" loading="lazy"></div>
+          <p>Tu estilo. Nuestra firma.</p>
+        </div>
 
-        <a href="index.html" class="brand">
-          MEDELLÍN<span>STUDIO</span>
-        </a>
-
-        <nav class="footer-nav"
-             aria-label="Enlaces del pie de página">
-          <a href="index.html">INICIO</a>
-          <a href="servicios.html">SERVICIOS</a>
-          <a href="galeria.html">GALERÍA</a>
-          <a href="nosotros.html">NOSOTROS</a>
-          <a href="contacto.html">CONTACTO</a>
-        </nav>
-
+        <div class="footer-links">
+          <div>
+            <strong>EXPLORA</strong>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+          </div>
+          <div>
+            <strong>VISÍTANOS</strong>
+            <a href="contacto.html">Calle Ezequiel Solana, 99</a>
+            <a href="reservas.html">Reservar cita</a>
+            <a href="https://www.instagram.com/medellin__studio/"
+               target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          </div>
+        </div>
       </div>
 
       <div class="footer-bottom">
         <span>© <span id="current-year">2026</span> MEDELLÍN STUDIO</span>
-        <span>CALLE EZEQUIEL SOLANA 99 · MADRID</span>
+        <span>CIUDAD LINEAL · MADRID</span>
       </div>
-
     </div>
   </footer>
 

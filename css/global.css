@@ -1,33 +1,46 @@
-
 /* ==========================================
-   MEDELLÍN STUDIO — GLOBAL CSS
+   MEDELLÍN STUDIO — GLOBAL (LUXURY NEGRO / ORO)
 ========================================== */
 
-
 :root {
-  /* COLORES */
-  --black: #0b0b0d;
-  --charcoal: #202126;
-  --gray: #777b83;
-  --light: #e9e9eb;
-  --white: #ffffff;
-  --blue: #3978da;
+  /* PALETA — tomada del logotipo */
+  --ink: #000000;          /* fondo del logo */
+  --surface: #070707;
+  --surface-2: #101010;
+  --silver: #d8d8d8;       /* letras cromadas de MEDELLÍN */
+  --chrome: linear-gradient(180deg, #ffffff 0%, #e6e6e6 38%, #9a9a9a 52%, #d9d9d9 70%, #f4f4f4 100%);
+  --gold: #c9a45c;         /* STUDIO, líneas y estrellas */
+  --gold-soft: #e6c88c;
+  --gold-deep: #8e6b32;
+  --gold-metal: linear-gradient(180deg, #f1d79f 0%, #d1aa62 45%, #a57a3b 60%, #e3c37f 100%);
+  --text: #ececec;
+  --muted: #9a9a9a;
+  --line: rgba(201, 164, 92, .22);
+  --line-strong: rgba(201, 164, 92, .55);
 
-  --background: var(--black);
-  --foreground: var(--white);
-  --border: rgba(255, 255, 255, .12);
+  /* Compatibilidad con nombres anteriores */
+  --black: var(--ink);
+  --charcoal: var(--surface-2);
+  --gray: var(--muted);
+  --light: var(--text);
+  --white: var(--text);
+  --blue: var(--gold);
+  --background: var(--ink);
+  --foreground: var(--text);
+  --border: var(--line);
 
-  /* TIPOGRAFÍA */
-  --font-title: 'Barlow Condensed', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  /* TIPOGRAFÍA — geométrica y ancha, como el logo */
+  --font-title: 'Michroma', 'Arial Black', sans-serif;
+  --font-body: 'Jost', Arial, sans-serif;
+  --font-accent: 'Jost', Arial, sans-serif;
 
   /* ESTRUCTURA */
-  --container: 1200px;
-  --radius: 8px;
-  --transition: 250ms ease;
+  --container: 1240px;
+  --radius: 0;
+  /* Corte en diagonal, como los trazos de la E y la Z del logo */
+  --cut: polygon(28px 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%, 0 28px);
+  --ease: cubic-bezier(.22, .61, .36, 1);
 }
-
-/* RESET */
 
 *,
 *::before,
@@ -44,9 +57,11 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--ink);
+  color: var(--text);
   font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,13 +106,8 @@ textarea {
   resize: vertical;
 }
 
-/* CONTENEDOR */
-
 .container {
-  width: min(
-    var(--container),
-    calc(100% - 40px)
-  );
+  width: min(var(--container), calc(100% - 48px));
   margin-inline: auto;
 }
 
@@ -107,24 +117,42 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-title);
-  text-transform: uppercase;
-  line-height: .95;
   margin: 0;
+  font-family: var(--font-title);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.12;
+  letter-spacing: .06em;
 }
 
 h1 {
-  font-size: clamp(3.5rem, 9vw, 8rem);
-  font-weight: 800;
+  font-size: clamp(2.1rem, 4.6vw, 4.4rem);
 }
 
 h2 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 700;
+  font-size: clamp(1.7rem, 3.3vw, 3rem);
+}
+
+/* Títulos grandes en cromo, como MEDELLÍN */
+h1,
+h2 {
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Segunda línea en oro, como STUDIO */
+h1 span,
+h2 span {
+  background: var(--gold-metal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 button,
@@ -134,25 +162,25 @@ textarea {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ACCESIBILIDAD */
-
 ::selection {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 1px solid var(--gold-soft);
   outline-offset: 4px;
 }
-
-/* ANCLAS */
 
 section[id] {
   scroll-margin-top: 100px;
 }
 
-/* MOVIMIENTO REDUCIDO */
+@media (max-width: 650px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -167,4 +195,13 @@ section[id] {
     transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

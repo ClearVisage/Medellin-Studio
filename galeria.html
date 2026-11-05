@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0d">
+  <meta name="theme-color" content="#000000">
 
   <!-- SEO -->
   <title>Galería de cortes de pelo en Madrid | Medellín Studio</title>
@@ -33,19 +33,12 @@
   >
 
   <!-- FUENTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
 
   <!-- ESTILOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/paginas.css">
@@ -67,28 +60,24 @@
   <!-- CABECERA -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-
-      <a href="index.html" class="brand" aria-label="Medellín Studio, inicio">
-        MEDELLÍN<span>STUDIO</span>
+      <a class="brand" href="index.html" aria-label="Medellín Studio, inicio">
+        <img src="img/logo-horizontal.png" alt="Medellín Studio" width="182" height="34">
       </a>
 
-      <button class="menu-toggle" id="menu-toggle"
-              type="button"
-              aria-label="Abrir menú"
-              aria-expanded="false"
-              aria-controls="site-nav">
+      <button class="menu-toggle" id="menu-toggle" type="button"
+              aria-label="Abrir menú" aria-controls="main-nav"
+              aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-        <a href="index.html">INICIO</a>
-        <a href="servicios.html">SERVICIOS</a>
-        <a href="galeria.html" class="active" aria-current="page">GALERÍA</a>
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="reservas.html" class="nav-book">RESERVAR ↗</a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html" class="active" aria-current="page">Galería</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="reservas.html" class="nav-booking">Reservar cita</a>
       </nav>
-
     </div>
   </header>
 
@@ -117,7 +106,7 @@
         <div class="gallery-section-top">
           <div>
             <span class="gallery-eyebrow">MEDELLÍN STUDIO / MADRID</span>
-            <h2>EL RESULTADO<br>HABLA POR SÍ SOLO.</h2>
+            <h2>EL RESULTADO<br><span>HABLA POR SÍ SOLO.</span></h2>
           </div>
 
           <span class="gallery-counter">NUESTROS TRABAJOS ↘</span>
@@ -142,7 +131,7 @@
 
         <div>
           <span class="gallery-eyebrow">SÍGUENOS EN INSTAGRAM</span>
-          <h2>EL ESTILO<br>NO SE DETIENE.</h2>
+          <h2>EL ESTILO<br><span>NO SE DETIENE.</span></h2>
           <p>
             Más cortes, más inspiración y novedades de nuestro estudio.
           </p>
@@ -156,6 +145,15 @@
         </a>
 
       </div>
+
+      <div class="container gallery-strip">
+        <img src="img/corte-en-el-estudio.jpg"
+             alt="Degradado terminado en Medellín Studio" loading="lazy" decoding="async">
+        <img src="img/barbero-esneider.jpg"
+             alt="Esneider, barbero de Medellín Studio" loading="lazy" decoding="async">
+        <img src="img/barbero-jadiel.jpg"
+             alt="Jadiel, barbero de Medellín Studio" loading="lazy" decoding="async">
+      </div>
     </section>
 
     <!-- RESERVAS -->
@@ -163,7 +161,7 @@
       <div class="container gallery-cta-inner">
         <div>
           <span class="gallery-eyebrow">¿TE TOCA UN CAMBIO?</span>
-          <h2>EL PRÓXIMO<br>PUEDES SER TÚ.</h2>
+          <h2>EL PRÓXIMO<br><span>PUEDES SER TÚ.</span></h2>
         </div>
 
         <a href="reservas.html" class="gallery-cta-button">
@@ -178,22 +176,32 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <a href="index.html" class="brand">
-          MEDELLÍN<span>STUDIO</span>
-        </a>
+        <div>
+          <div class="footer-brand"><img src="img/logo.png" alt="Medellín Studio" width="380" height="111" loading="lazy"></div>
+          <p>Tu estilo. Nuestra firma.</p>
+        </div>
 
-        <nav class="footer-nav" aria-label="Enlaces del pie de página">
-          <a href="index.html">INICIO</a>
-          <a href="servicios.html">SERVICIOS</a>
-          <a href="galeria.html">GALERÍA</a>
-          <a href="nosotros.html">NOSOTROS</a>
-          <a href="contacto.html">CONTACTO</a>
-        </nav>
+        <div class="footer-links">
+          <div>
+            <strong>EXPLORA</strong>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+          </div>
+          <div>
+            <strong>VISÍTANOS</strong>
+            <a href="contacto.html">Calle Ezequiel Solana, 99</a>
+            <a href="reservas.html">Reservar cita</a>
+            <a href="https://www.instagram.com/medellin__studio/"
+               target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          </div>
+        </div>
       </div>
 
       <div class="footer-bottom">
         <span>© <span id="current-year">2026</span> MEDELLÍN STUDIO</span>
-        <span>CALLE EZEQUIEL SOLANA 99 · MADRID</span>
+        <span>CIUDAD LINEAL · MADRID</span>
       </div>
     </div>
   </footer>

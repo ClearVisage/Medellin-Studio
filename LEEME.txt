@@ -1,0 +1,17 @@
+MEDELLÍN STUDIO — VERSIÓN FINAL (BASADA EN EL LOGOTIPO)
+
+Identidad tomada del logo (img/logo.png):
+- Negro puro, títulos en cromo/plata (MEDELLÍN) y segunda línea en oro (STUDIO).
+- Tipografía: Michroma (títulos) + Jost (textos).
+- Estrellas doradas y líneas finas del logo como ornamento; fotos con esquinas en diagonal.
+
+Fotos reales (carpeta img/), sacadas del perfil público de Medellín Studio en Booksy:
+- corte-en-el-estudio.jpg   foto del negocio (degradado terminado)
+- barbero-david.jpg         David trabajando
+- barbero-esneider.jpg      Esneider (sudadera Medellín Studio)
+- barbero-jadiel.jpg        Jadiel
+Para añadir más, guarda la foto en img/ y cambia la ruta en el HTML o en css/paginas.css.
+La galería completa (galeria.html) se llena con las fotos que se suben desde el panel.
+
+Otros archivos: img/logo-horizontal.png (cabecera), img/favicon.png, img/logo-original.jpg.
+La versión anterior (negro/dorado con serif) está guardada en _respaldo-version-dorada/.
