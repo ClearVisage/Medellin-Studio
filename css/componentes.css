@@ -449,3 +449,104 @@
     transform: none;
   }
 }
+
+/* ==========================================
+   BOTONES FLOTANTES DE REDES (Instagram, TikTok, WhatsApp)
+========================================== */
+
+.redes-flotantes {
+  position: fixed;
+  z-index: 900; /* debajo de la cabecera y su menú móvil */
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.red-flotante {
+  --tam: 48px;
+  width: var(--tam);
+  height: var(--tam);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--gold-soft);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+  transition:
+    transform 160ms cubic-bezier(.23, 1, .32, 1),
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    opacity 400ms cubic-bezier(.23, 1, .32, 1);
+}
+
+/* Entrada suave al cargar, escalonada */
+@starting-style {
+  .red-flotante {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.red-flotante:nth-child(2) { transition-delay: 0ms, 0ms, 0ms, 0ms, 60ms; }
+.red-flotante:nth-child(3) { transition-delay: 0ms, 0ms, 0ms, 0ms, 120ms; }
+
+.red-flotante svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .red-flotante:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+}
+
+.red-flotante:active {
+  transform: scale(.94);
+}
+
+.red-flotante:focus-visible {
+  outline: 1px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .redes-flotantes {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .red-flotante {
+    --tam: 44px;
+  }
+
+  .red-flotante svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @starting-style {
+    .red-flotante {
+      transform: none;
+    }
+  }
+}
+
+/* Que el pie de página no quede debajo de los botones flotantes */
+@media (max-width: 1400px) {
+  .footer-bottom {
+    padding-right: 64px;
+  }
+}
