@@ -1822,3 +1822,154 @@
   font-weight: 400;
   font-size: 0.92em;
 }
+
+/* ==========================================================
+   AJUSTE DE DENSIDAD — menos negro vacío junto a los textos
+   (bloque independiente: borrarlo devuelve el diseño anterior)
+========================================================== */
+
+:root {
+  /* Ritmo vertical único para todas las secciones */
+  --section-y: clamp(72px, 7.5vw, 104px);
+  /* Gris de apoyo un poco más claro y cálido: se lee sobre negro */
+  --muted: #b3ada3;
+  /* Brillo dorado muy suave para que el negro no sea plano */
+  --glow: radial-gradient(ellipse 55% 60% at 88% 0%, rgba(201,164,92,.07), transparent 70%);
+  --glow-left: radial-gradient(ellipse 50% 60% at 8% 100%, rgba(201,164,92,.06), transparent 70%);
+}
+
+/* 1. Relleno vertical: de 130–160px a 72–104px */
+.section,
+.about-preview,
+.services-page-section,
+.services-info-section,
+.gallery-section,
+.gallery-instagram,
+.about-page-story,
+.about-page-values,
+.about-page-team,
+.contact-page-info,
+.contact-page-location,
+.contact-page-cta,
+.booking-page-services {
+  padding-block: var(--section-y);
+}
+
+.booking-banner {
+  padding-block: clamp(88px, 9vw, 128px);
+}
+
+.section-heading,
+.about-page-section-heading {
+  margin-bottom: clamp(36px, 4vw, 48px);
+}
+
+.section-footer {
+  margin-top: 28px;
+}
+
+/* 2. Profundidad: brillo dorado alterno en lugar de negro plano */
+.services-preview,
+.location-preview,
+.services-page-section,
+.about-page-values,
+.contact-page-info,
+.booking-page-services {
+  background-image: var(--glow);
+}
+
+.about-preview,
+.gallery-section,
+.about-page-team,
+.contact-page-location {
+  background-image: var(--glow-left);
+}
+
+/* 3. Textos de apoyo: más grandes, más claros y más anchos */
+.section-heading > p {
+  max-width: 420px;
+  font-size: 16px;
+  color: #cfc9bf;
+}
+
+.service-info p,
+.service-card-description,
+.services-info-grid p,
+.about-page-value p,
+.location-preview p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.services-disclaimer {
+  font-size: 13px;
+}
+
+.hero-bottom,
+.service-card-duration,
+.contact-page-card > span,
+.contact-map-label,
+.gallery-counter,
+.team-member span,
+.about-page-hero-bottom > span,
+.contact-page-hero-bottom > span,
+.booking-page-hero-bottom > span {
+  font-size: 11px;
+}
+
+.gallery-item-info span,
+.about-visual-label {
+  font-size: 10px;
+}
+
+/* 4. Cabecera de páginas interiores: menos alta y el logo de fondo
+      llena el lado derecho sin chocar con el título */
+.services-hero,
+.gallery-hero,
+.about-page-hero,
+.contact-page-hero,
+.booking-page-hero {
+  padding: clamp(150px, 14vw, 176px) 0 clamp(56px, 6vw, 72px);
+}
+
+.services-hero::after,
+.gallery-hero::after,
+.about-page-hero::after,
+.contact-page-hero::after,
+.booking-page-hero::after {
+  right: max(24px, calc((100vw - var(--container)) / 2));
+  width: min(40vw, 560px);
+  top: 46%;
+  transform: translateY(-50%);
+  opacity: .11;
+}
+
+.about-page-hero-bottom,
+.contact-page-hero-bottom,
+.booking-page-hero-bottom {
+  margin-top: 44px;
+  padding-top: 28px;
+}
+
+/* 5. Tarjetas de valores (Nosotros): "PERSONALIDAD" ya no se sale */
+.about-page-value {
+  padding: 40px clamp(22px, 2.6vw, 34px);
+}
+
+.about-page-value h3 {
+  margin: 26px 0 14px;
+  font-size: clamp(16px, 1.55vw, 22px);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .services-hero::after,
+  .gallery-hero::after,
+  .about-page-hero::after,
+  .contact-page-hero::after,
+  .booking-page-hero::after {
+    width: 70vw;
+    top: 30%;
+    opacity: .06;
+  }
+}
