@@ -1,3 +1,15 @@
+/* Pinta "12.00 €" con el símbolo € en Jost (Michroma lo dibuja ilegible) */
+function ponerPrecio(elemento, texto) {
+  if (!texto.endsWith(" €")) {
+    elemento.textContent = texto;
+    return;
+  }
+  const moneda = document.createElement("span");
+  moneda.className = "moneda";
+  moneda.textContent = "€";
+  elemento.replaceChildren(texto.slice(0, -2) + "\u2009", moneda);
+}
+
 
 /* =========================================
    MEDELLÍN STUDIO — SERVICIOS PÚBLICOS
@@ -42,7 +54,7 @@ function crearTarjetaServicio(servicio, indice) {
 
   const precio = document.createElement("strong");
   precio.className = "service-card-price";
-  precio.textContent = formatoPrecio(servicio.precio);
+  ponerPrecio(precio, formatoPrecio(servicio.precio));
 
   const duracion = document.createElement("span");
   duracion.className = "service-card-duration";

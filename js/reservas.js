@@ -1,3 +1,15 @@
+/* Pinta "12.00 €" con el símbolo € en Jost (Michroma lo dibuja ilegible) */
+function ponerPrecio(elemento, texto) {
+  if (!texto.endsWith(" €")) {
+    elemento.textContent = texto;
+    return;
+  }
+  const moneda = document.createElement("span");
+  moneda.className = "moneda";
+  moneda.textContent = "€";
+  elemento.replaceChildren(texto.slice(0, -2) + "\u2009", moneda);
+}
+
 
 /* ==========================================
    MEDELLÍN STUDIO — RESERVAS
@@ -82,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const precio = document.createElement("strong");
     precio.className = "booking-service-price";
-    precio.textContent = formatearPrecio(servicio.precio);
+    ponerPrecio(precio, formatearPrecio(servicio.precio));
 
     const boton = document.createElement("a");
     boton.className = "booking-service-button";
