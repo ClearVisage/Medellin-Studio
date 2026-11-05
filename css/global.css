@@ -31,6 +31,7 @@
 
   /* TIPOGRAFÍA — geométrica y ancha, como el logo */
   --font-title: 'Michroma', 'Arial Black', sans-serif;
+  --font-price: 'Michroma', 'Jost', Arial, sans-serif; /* Jost dibuja el € si Michroma no lo trae */
   --font-body: 'Jost', Arial, sans-serif;
   --font-accent: 'Jost', Arial, sans-serif;
 

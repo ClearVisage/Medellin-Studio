@@ -22,10 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function formatoPrecio(valor) {
-    return new Intl.NumberFormat("es-ES", {
-      style: "currency",
-      currency: "EUR"
-    }).format(valor);
+    return `${Number(valor).toFixed(2)} €`;
   }
 
   async function comprobarAcceso() {

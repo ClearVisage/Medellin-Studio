@@ -170,7 +170,7 @@
 }
 
 .service-price {
-  font-family: var(--font-title);
+  font-family: var(--font-price);
   font-size: 22px;
   font-weight: 500;
   color: var(--gold-soft);
@@ -713,7 +713,7 @@
 }
 
 .service-card-price {
-  font-family: var(--font-title);
+  font-family: var(--font-price);
   font-size: 28px;
   font-weight: 500;
   line-height: 1;
@@ -1331,7 +1331,7 @@
 }
 
 .booking-service-price {
-  font-family: var(--font-title);
+  font-family: var(--font-price);
   font-size: 23px;
   font-weight: 500;
   color: var(--gold-soft);

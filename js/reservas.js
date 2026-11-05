@@ -35,12 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return "Consultar precio";
     }
 
-    return new Intl.NumberFormat("es-ES", {
-      style: "currency",
-      currency: "EUR",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2
-    }).format(precio);
+    return `${Number(precio).toFixed(2)} €`;
   }
 
   function formatearDuracion(valor) {
